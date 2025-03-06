@@ -174,7 +174,7 @@
             const cake = cakes.find(c => c.id === cakeId);
             cart.push(cake);
             updateCart();
-            alert(${cake.name} has been added to your cart for ₹${cake.price.toFixed(2)});
+            alert(`${cake.name} has been added to your cart for ₹${cake.price.toFixed(2)}`);
         }
 
         function updateCart() {
@@ -184,7 +184,7 @@
             cart.forEach(item => {
                 const listItem = document.createElement('li');
                 listItem.className = 'list-group-item';
-                listItem.textContent = ${item.name} - ₹${item.price.toFixed(2)};
+                listItem.textContent = `${item.name} - ₹${item.price.toFixed(2)}`;
                 cartItems.appendChild(listItem);
                 total += item.price;
             });
